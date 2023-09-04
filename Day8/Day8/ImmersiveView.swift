@@ -24,13 +24,15 @@ struct ImmersiveView: View {
                 cube2.addChild(attachment)
             }
         } attachments: {
-            Text("Cube1")
-                .font(.system(size: 48))
-                .tag("cube1_label")
+            Attachment(id: "Cubes") {
+                Text("Cube1")
+                    .font(.system(size: 48))
+                    .tag("cube1_label")
 
-            Text("Cube2")
-                .font(.system(size: 48))
-                .tag("cube2_label")
+                Text("Cube2")
+                    .font(.system(size: 48))
+                    .tag("cube2_label")
+            }
         }
         .gesture(
             SpatialTapGesture()
